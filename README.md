@@ -80,4 +80,8 @@ Developed by **KJ5IUL** (Supergremlin25)
 Oklahoma City, OK  
 Licensed Amateur Radio Operator
 
-
+You can also get in touch through:
+- Oklahoma Meshtastic Telegram - https://t.me/OKMeshtastic
+- OK DMR & Digital - https://t.me/OK_DMR_digital
+- OK 650 Discord Server - https://discord.gg/feVDqnVD
+- GitHub Issues & Discussions
