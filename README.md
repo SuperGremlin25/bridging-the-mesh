@@ -1,4 +1,3 @@
-
 # Bridging the Mesh
 
 **Hybrid Meshtastic + AREDN Gateway** powered by Raspberry Pi and Edge AI  
@@ -76,3 +75,10 @@ This project follows FCC Part 97 guidelines by:
 MIT License – see `LICENSE` for details.
 
 ---
+
+---
+
+## 📡 Project Lead  
+Developed by **KJ5IUL** (Supergremlin25)  
+Oklahoma City, OK  
+Licensed Amateur Radio Operator

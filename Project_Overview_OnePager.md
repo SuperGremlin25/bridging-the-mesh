@@ -1,4 +1,3 @@
-
 # 🛰️ Bridging the Mesh – Project Overview
 
 **What if we could merge low-power LoRa messaging and high-speed ham radio mesh into one seamless, AI-powered network?**
@@ -75,3 +74,11 @@ This project brings **true hybrid mesh networking** to life:
 - Join the OKC Mesh community on Facebook or GitHub
 
 Together, we’re building resilient comms for the next generation.
+
+---
+
+## 👨‍🔧 Maintainer
+
+Project created and maintained by **KJ5IUL**  
+Oklahoma City-based amateur radio operator and mesh enthusiast.  
+GitHub: [Supergremlin25](https://github.com/Supergremlin25)
