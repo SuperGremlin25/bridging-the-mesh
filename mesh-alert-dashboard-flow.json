@@ -1,3 +1,0 @@
-{
-  "flow": "This is a Node-RED export flow that subscribes to 'from_meshtastic', filters for 'HELP', and sends dashboard alerts."
-}
