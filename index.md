@@ -1,4 +1,3 @@
-
 # Bridging the Mesh 🌐
 
 **A hybrid LoRa and ham radio IP mesh system powered by MQTT and local AI.**
@@ -38,3 +37,16 @@ Easily display:
 > Clone the repo, fire up your Pi, and bring Meshtastic + AREDN together.
 
 Join the mission → https://github.com/Supergremlin25/bridging-the-mesh
+---
+
+```
+     __  __ ______     _____ _      _    _ _      _ 
+    |  \/  |  ____|   |_   _| |    | |  | | |    | |
+    | \  / | |__ ______| | | |    | |  | | |    | |
+    | |\/| |  __|______| | | |    | |  | | |    | |
+    | |  | | |____    _| |_| |____| |__| | |____|_|
+    |_|  |_|______|  |_____|______|\____/|______(_)
+                                                  
+                   KJ5IUL • Oklahoma
+     Bridging Meshtastic + AREDN with AI + MQTT
+```

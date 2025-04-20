@@ -82,3 +82,16 @@ MIT License – see `LICENSE` for details.
 Developed by **KJ5IUL** (Supergremlin25)  
 Oklahoma City, OK  
 Licensed Amateur Radio Operator
+---
+
+```
+     __  __ ______     _____ _      _    _ _      _ 
+    |  \/  |  ____|   |_   _| |    | |  | | |    | |
+    | \  / | |__ ______| | | |    | |  | | |    | |
+    | |\/| |  __|______| | | |    | |  | | |    | |
+    | |  | | |____    _| |_| |____| |__| | |____|_|
+    |_|  |_|______|  |_____|______|\____/|______(_)
+                                                  
+                   KJ5IUL • Oklahoma
+     Bridging Meshtastic + AREDN with AI + MQTT
+```

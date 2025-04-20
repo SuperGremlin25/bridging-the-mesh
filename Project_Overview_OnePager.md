@@ -82,3 +82,16 @@ Together, we’re building resilient comms for the next generation.
 Project created and maintained by **KJ5IUL**  
 Oklahoma City-based amateur radio operator and mesh enthusiast.  
 GitHub: [Supergremlin25](https://github.com/Supergremlin25)
+---
+
+```
+     __  __ ______     _____ _      _    _ _      _ 
+    |  \/  |  ____|   |_   _| |    | |  | | |    | |
+    | \  / | |__ ______| | | |    | |  | | |    | |
+    | |\/| |  __|______| | | |    | |  | | |    | |
+    | |  | | |____    _| |_| |____| |__| | |____|_|
+    |_|  |_|______|  |_____|______|\____/|______(_)
+                                                  
+                   KJ5IUL • Oklahoma
+     Bridging Meshtastic + AREDN with AI + MQTT
+```
