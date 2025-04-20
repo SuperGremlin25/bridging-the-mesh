@@ -1,0 +1,105 @@
+[
+  {
+    "id": "mqtt-in",
+    "type": "mqtt in",
+    "z": "flow1",
+    "name": "From Meshtastic",
+    "topic": "from_meshtastic",
+    "qos": "2",
+    "datatype": "auto",
+    "broker": "mqtt-broker",
+    "x": 140,
+    "y": 100,
+    "wires": [
+      [
+        "function-filter"
+      ]
+    ]
+  },
+  {
+    "id": "function-filter",
+    "type": "function",
+    "z": "flow1",
+    "name": "Filter 'HELP'",
+    "func": "if (msg.payload && msg.payload.includes('HELP')) {\n    msg.topic = \"ALERT\";\n    msg.payload = \"\ud83d\udea8 HELP message received: \" + msg.payload;\n    return [msg, null];\n} else {\n    return [null, msg];\n}",
+    "outputs": 2,
+    "noerr": 0,
+    "x": 320,
+    "y": 100,
+    "wires": [
+      [
+        "ui-alert"
+      ],
+      [
+        "debug-log"
+      ]
+    ]
+  },
+  {
+    "id": "debug-log",
+    "type": "debug",
+    "z": "flow1",
+    "name": "Log All",
+    "active": true,
+    "console": "false",
+    "complete": "true",
+    "x": 520,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "ui-alert",
+    "type": "ui_text",
+    "z": "flow1",
+    "group": "ui-group",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "name": "UI Alert",
+    "label": "ALERT",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "x": 520,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "mqtt-broker",
+    "type": "mqtt-broker",
+    "z": "",
+    "name": "Local MQTT",
+    "broker": "localhost",
+    "port": "1883",
+    "clientid": "",
+    "usetls": false,
+    "compatmode": false,
+    "keepalive": "60",
+    "cleansession": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "closeTopic": "",
+    "closePayload": "",
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": ""
+  },
+  {
+    "id": "ui-group",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "ui-tab",
+    "order": 1,
+    "disp": true,
+    "width": "6"
+  },
+  {
+    "id": "ui-tab",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Mesh Monitor",
+    "icon": "dashboard",
+    "order": 1
+  }
+]
