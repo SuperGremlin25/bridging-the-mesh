@@ -13,6 +13,10 @@ Built for resilient communications, off-grid sensor monitoring, and local mesh a
 - 📡 FCC Part 97 compliant (via public shared key or open channel)
 - 🌐 Fully offline-capable deployment (solar + LiFePO₄ supported)
 
+--- ## 🧾 Changelog
+
+Check out the [CHANGELOG.md](./CHANGELOG.md) for version history and planned features.
+
 ---
 
 ## 🧱 Hardware Required
