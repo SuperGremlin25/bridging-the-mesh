@@ -1,0 +1,43 @@
+
+[
+  {
+    "id": "mqtt-in",
+    "type": "mqtt in",
+    "name": "From Meshtastic",
+    "topic": "from_meshtastic",
+    "broker": "mqtt-broker",
+    "x": 140,
+    "y": 100,
+    "wires": [["function-filter"]]
+  },
+  {
+    "id": "function-filter",
+    "type": "function",
+    "name": "Filter 'HELP'",
+    "func": "if (msg.payload && msg.payload.includes('HELP')) {\n msg.topic = 'ALERT';\n msg.payload = '🚨 HELP: ' + msg.payload;\n return [msg, null];\n } else {\n return [null, msg];\n}",
+    "outputs": 2,
+    "x": 320,
+    "y": 100,
+    "wires": [["ui-alert"], ["debug-log"]]
+  },
+  {
+    "id": "debug-log",
+    "type": "debug",
+    "name": "Log All",
+    "active": true,
+    "complete": "true",
+    "x": 520,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "ui-alert",
+    "type": "ui_text",
+    "name": "UI Alert",
+    "label": "ALERT",
+    "format": "{{msg.payload}}",
+    "x": 520,
+    "y": 60,
+    "wires": []
+  }
+]
