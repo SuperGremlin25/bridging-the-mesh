@@ -1,0 +1,32 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Logs and runtime
+*.log
+*.pid
+
+# Virtual environments
+env/
+venv/
+ENV/
+
+# Node-RED config (if not exporting flows)
+*.backup
+flows_*.json
+
+# Models or large files
+*.gguf
+*.onnx
+
+# Credentials or API keys (if you make any)
+secrets.env
+.env
+
+# System junk
+*.swp
+*.bak
