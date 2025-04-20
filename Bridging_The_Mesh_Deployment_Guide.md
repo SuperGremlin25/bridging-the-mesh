@@ -129,7 +129,7 @@ python3 -m llama_cpp.server --model tiny-llama.gguf
 
 ---
 
-## 📡 STEP 10: Supernode Strategy
+## 📡 STEP 10: MeshBridge Unit (MBU) Strategy
 
 Deploy this stack on high-value infrastructure points like:
 - Strata Tower (OKC, 330’)
