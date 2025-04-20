@@ -4,20 +4,15 @@ import meshtastic
 import meshtastic.serial_interface
 import requests
 
-# MQTT Configuration
 MQTT_BROKER = "localhost"
 TOPIC_FROM_MESH = "from_meshtastic"
 TOPIC_FROM_AREDN = "from_aredn"
 TOPIC_ALERTS = "alerts/emergency"
 
-# Connect to Meshtastic device
 iface = meshtastic.serial_interface.SerialInterface()
-
-# Connect to MQTT broker
 client = mqtt.Client()
 client.connect(MQTT_BROKER, 1883, 60)
 
-# 🧠 Optional: Use local AI to classify messages
 def classify_with_ai(message):
     try:
         res = requests.post("http://localhost:8000/completion", json={
@@ -31,7 +26,6 @@ def classify_with_ai(message):
         print("[AI ERROR]", e)
         return ""
 
-# Callback: incoming messages from Meshtastic
 def onReceive(packet):
     msg = packet.get("decoded", {}).get("text")
     if msg:
@@ -44,7 +38,6 @@ def onReceive(packet):
 
 iface.onReceive = onReceive
 
-# Callback: incoming messages from AREDN → send to LoRa
 def on_aredn_msg(client, userdata, message):
     try:
         decoded = message.payload.decode()
@@ -56,8 +49,7 @@ def on_aredn_msg(client, userdata, message):
 client.subscribe(TOPIC_FROM_AREDN)
 client.on_message = on_aredn_msg
 
-# Start MQTT loop and keep script running
-print("📡 MQTT-LoRa-AI Bridge is running...")
+print("Bridge is running...")
 client.loop_start()
 
 while True:

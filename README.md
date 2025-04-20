@@ -75,5 +75,4 @@ This project follows FCC Part 97 guidelines by:
 
 MIT License – see `LICENSE` for details.
 
-🙋‍♂️ Want to contribute? [See how](CONTRIBUTING.md)
-
+---
