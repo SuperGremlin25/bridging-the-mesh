@@ -1,7 +1,3 @@
-# 📌 Suggested GitHub Issues
-
-Use these to seed your repository Issues tab:
-
 ## 1. [BUG] Meshtastic message not forwarded to AREDN reliably
 
 Sometimes messages received from Meshtastic don't appear to make it to the AREDN MQTT topic. Possibly a rate-limiting, serial, or message buffer issue?
