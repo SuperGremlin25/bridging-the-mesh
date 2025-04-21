@@ -101,10 +101,7 @@ This project is released under the MIT License. See [LICENSE](./LICENSE) for det
 
 ## Visual Diagram of Repo
 
-
-With **this improved version** using `text` for monospace formatting:
-
-<pre>
+pre>
 ```text
 bridging-the-mesh/
 ├── mqtt_bridge.py                  # Main bridge script
@@ -124,4 +121,4 @@ bridging-the-mesh/
 ├── mesh-alert-dashboard-flow.json  # Node-RED dashboard flow export
 ├── wiki/                            # GitHub Wiki pages
 │   └── (multiple .md files)
-
+</Pre>
