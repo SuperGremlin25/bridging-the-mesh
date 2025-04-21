@@ -1,91 +1,100 @@
-# Bridging the Mesh
 
-**Hybrid Meshtastic + AREDN Gateway** powered by Raspberry Pi and Edge AI  
-Built for resilient communications, off-grid sensor monitoring, and local mesh automation.
+# 🛰️ Bridging the Mesh
 
----
-
-## 🔥 Features
-
-- 🔄 MQTT-based message bridging (LoRa ↔ AREDN)
-- 🧠 Local AI assistant with TinyLLaMA for keyword detection
-- 🧰 Node-RED dashboards for live message visualization
-- 📡 FCC Part 97 compliant (via public shared key or open channel)
-- 🌐 Fully offline-capable deployment (solar + LiFePO₄ supported)
-
---- ## 🧾 Changelog
-
-Check out the [CHANGELOG.md](./CHANGELOG.md) for version history and planned features.
+**A Hybrid Emergency Gateway for LoRa + AREDN + AI**  
+Created by: **KJ5IUL (Supergremlin25)** | Oklahoma City
 
 ---
 
-## 🧱 Hardware Required
+## 🌐 Overview
 
-| Component | Example |
-|----------|--------|
-| MeshBridging Unit (MBU) | Raspberry Pi 5 / reComputer R2130-12 |
-| LoRa Radio | FemtoFox / T-Beam / RAK4631 |
-| AREDN Router | MikroTik hAP ac2 or ac lite |
-| Power | USB-C or PoE splitter |
-| Optional | Solar + LiFePO₄ battery, Ethernet switch |
+Bridging the Mesh is a beta-stage open-source project designed to connect **Meshtastic LoRa mesh networks** with **AREDN high-speed IP mesh nodes**, enhanced with lightweight **AI classification** and **Node-RED dashboards**.
+
+This system enables **offline, resilient communication** during emergencies or infrastructure outages using low-cost, repurposed gear.
 
 ---
 
-## ⚙️ Python Bridge Script
+## 🔧 Features
 
-- Located in: `mqtt_bridge.py`
-- Bridges MQTT traffic between AREDN (IP) and Meshtastic (LoRa)
-- Compatible with Meshtastic Python API and paho-mqtt
-
----
-
-## 🧰 Node-RED Alert Flow
-
-File: `mesh-alert-dashboard-flow.json`
-
-### What it does:
-- Subscribes to `from_meshtastic`
-- Filters messages containing `"HELP"`
-- Sends dashboard alerts
-- Logs messages in debug
-
-### How to use:
-1. Visit `http://<pi-ip>:1880`
-2. Menu > **Import** → Upload the JSON
-3. Click **Deploy**
-4. Open dashboard at `http://<pi-ip>:1880/ui`
+- 🔁 MQTT-based message bridging: LoRa <-> AREDN
+- 🧠 AI assistant (TinyLLaMA): Flags terms like "HELP", "FIRE", "EMERGENCY"
+- 📊 Node-RED dashboard: Displays real-time messages and alerts
+- 🔋 Fully off-grid deployable: Solar + LiFePO₄ + field-ready Pi units
+- 🧰 Tested on Raspberry Pi, FemtoFox, MikroTik hAP ac, Ubiquiti nodes
+- 📡 Extends LoRa range using AREDN backbone
+- 💬 Designed for hams, preppers, educators & civic mesh deployments
 
 ---
 
-## 🤖 AI Assistant
+## 📥 Getting Started
 
-- TinyLLaMA model runs locally on Hailo-8 (or CPU fallback)
-- REST API used by `mqtt_bridge.py` to classify message priority
-- Publishes flagged messages to `alerts/emergency`
+Use the resources below to clone, configure, and run your first MeshBridging Unit (MBU).
 
----
-
-## 🔐 Compliance
-
-This project follows FCC Part 97 guidelines by:
-- Broadcasting only unencrypted or publicly shared-key messages
-- Identifying ham-band AREDN traffic by callsign at gateway level
-- Filtering and alerting locally (not altering RF packets)
+- 📄 [Installation Guide](./INSTALL.md) — How to clone, install, and run everything  
+- 📦 [Python Dependencies](./requirements.txt) — Required packages  
+- 🧭 [Deployment Guide (Wiki)](https://github.com/SuperGremlin25/bridging-the-mesh/wiki/Deployment-Guide)
 
 ---
 
-## 📄 License
+## 🚀 Quick Start
 
-MIT License – see `LICENSE` for details.
+```bash
+git clone https://github.com/SuperGremlin25/bridging-the-mesh.git
+cd bridging-the-mesh
+python3 -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python mqtt_bridge.py
+```
 
+---
 
-## 📡 Project Lead  
-Developed by **KJ5IUL** (Supergremlin25)  
-Oklahoma City, OK  
-Licensed Amateur Radio Operator
+## 🛠 Hardware Reference
 
-You can also get in touch through:
-- Oklahoma Meshtastic Telegram - https://t.me/OKMeshtastic
-- OK DMR & Digital - https://t.me/OK_DMR_digital
-- OK 650 Discord Server - https://discord.gg/feVDqnVD
-- GitHub Issues & Discussions
+**MeshBridging Unit (MBU)**
+- Raspberry Pi 4 or Seeed reComputer R2130-12 (Pi 5 + Hailo-8)
+- Meshtastic LoRa Node (T-Beam or FemtoFox)
+- AREDN node (MikroTik hAP ac2 or Ubiquiti NanoStation)
+- LiFePO₄ Battery + Solar Panel (optional)
+- MQTT Broker (on Pi or external)
+- Node-RED server (optional dashboard)
+
+---
+
+## 🧪 Testing Goals (Beta Phase)
+
+- Validate LoRa → MQTT → AREDN routing
+- Confirm AI classifier detects alerts correctly
+- Monitor stability on low-power setups (Raspberry Pi)
+- Test bidirectional communication and map routing
+
+---
+
+## 📘 Documentation & Extras
+
+- 🧾 [AREDN Flashing Guide (PDF)](./AREDN_Flashing_Field_Guide.pdf)
+- 🧠 [AI Assistant Integration Notes](./ai_assistant_integration.md)
+- 📄 [Printable Test Checklist](./Test_Checklist.md)
+- 📊 Node-RED JSON Flows available in `/nodered_flows/`
+
+---
+
+## 🧠 Project Status
+
+This is a **beta prototype** designed to show what’s possible — not a polished consumer system. We're calling on radio experts, coders, and tinkerers to help test, refine, and scale this across Oklahoma and beyond.
+
+---
+
+## 📣 Get Involved
+
+Pull requests, issues, and forks welcome!
+
+- 🤝 Collaborator Onboarding → See CONTRIBUTING.md (coming soon)
+- 🗨️ Join the discussion: Facebook / Discord / Reddit (share links here)
+- 🛠️ Project built by: [SuperGremlin25](https://github.com/SuperGremlin25)
+
+---
+
+## 🔖 License
+
+This project is released under the MIT License. See [LICENSE](./LICENSE) for details.
