@@ -1,87 +1,94 @@
 
-# 🛠️ Installation Guide – Bridging the Mesh
+# 🧰 Installation Guide – Bridging the Mesh
 
-This guide walks you through setting up the development environment and running the Bridging the Mesh gateway.
+This guide walks you through installing and running the Bridging the Mesh project on Linux or Raspberry Pi.
 
 ---
 
-## ✅ 1. Clone the Repository
+## 🚀 Quick Setup (Recommended)
+
+For most users, the easiest way to get started is with our automated setup script:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This script will:
+- ✅ Create a Python virtual environment
+- 📦 Install all required dependencies (`requirements.txt`)
+- 🤖 Optionally launch the Flask AI assistant
+- 🔁 Optionally run the MQTT-Meshtastic bridge script
+
+This method is ideal for Raspberry Pi or any Linux system.
+
+---
+
+## 🛠️ Manual Setup (Advanced / Alternate Option)
+
+If you prefer manual installation, follow the steps below:
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/SuperGremlin25/bridging-the-mesh.git
 cd bridging-the-mesh
 ```
 
----
-
-## ✅ 2. Set Up Python Environment
-
-We recommend using a virtual environment to avoid dependency issues.
+### 2. Create and Activate a Virtual Environment
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate      # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 ```
 
----
-
-## ✅ 3. Install Required Python Dependencies
-
-Install required packages from the provided `requirements.txt` file:
+### 3. Install Python Dependencies
 
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is not available, install manually:
+### 4. Configure Your `.conf` File
 
-```bash
-pip install paho-mqtt meshtastic flask weasyprint
-```
+Edit `mqtt_bridge.conf` to set your:
 
-> Note: You may need to install additional libraries for LLM support depending on your AI model (e.g., TinyLLaMA or local transformer).
+- MQTT broker address and credentials
+- Meshtastic device port
+- AI assistant settings (URL, timeout, enable/disable)
 
----
-
-## ✅ 4. Configure Your Hardware
-
-Ensure the following hardware is connected and powered on:
-
-- Raspberry Pi (or test machine)
-- Meshtastic Node (via USB or UART)
-- AREDN Router (via Ethernet or Tunnel)
-- MQTT Broker (local or external)
-- Optional: Node-RED and sensor devices
-
----
-
-## ✅ 5. Run the Gateway Script
-
-Run the Python bridge that connects Meshtastic <-> AREDN via MQTT.
+### 5. Start the MQTT Bridge
 
 ```bash
 python mqtt_bridge.py
 ```
 
----
+### 6. (Optional) Start AI Classifier Flask Server
 
-## 🧪 Testing Setup
+You can run a local Flask API to handle message classification:
 
-Once running, test the flow:
+```bash
+python3 -m flask --app ai_assistant_integration run --port=8000
+```
 
-- Send a message from your Meshtastic device
-- Check if it appears on the AREDN side (e.g., dashboard or message log)
-- Try the reverse flow from AREDN → MQTT → Meshtastic
-
----
-
-## 📎 Optional Tools
-
-- [Node-RED](https://nodered.org) for live dashboards
-- [Mosquitto](https://mosquitto.org) for your MQTT broker
-- [AREDN Firmware](https://www.arednmesh.org/software) for flashing routers
-- [TinyLLaMA](https://github.com/jzhang38/TinyLLaMA) for AI assistance (if using)
+Make sure the `ai_service.url` in your `.conf` file points to this port.
 
 ---
 
-If you run into trouble, check the Deployment Guide or open an issue.
+## 🧪 Test Your Setup
+
+- Send a message from a Meshtastic node.
+- Watch it appear in your MQTT broker or AREDN dashboard.
+- Try triggering alerts with keywords like "HELP" or "FIRE".
+
+---
+
+## 📚 Additional Resources
+
+- [`ai_assistant_integration.md`](./ai_assistant_integration.md)
+- [`mqtt_bridge.conf`](./mqtt_bridge.conf)
+- [Project Wiki](https://github.com/SuperGremlin25/bridging-the-mesh/wiki)
+
+---
+
+Happy bridging!
