@@ -104,6 +104,10 @@ This project is released under the MIT License. See [LICENSE](./LICENSE) for det
 With **this improved version** using `text` for monospace formatting:
 
 
+With **this improved version** using `text` for monospace formatting:
+
+<pre>
+```text
 bridging-the-mesh/
 ├── mqtt_bridge.py                  # Main bridge script
 ├── mqtt_bridge.conf                # Configuration file for MQTT, AI, and LoRa
@@ -122,5 +126,6 @@ bridging-the-mesh/
 ├── mesh-alert-dashboard-flow.json  # Node-RED dashboard flow export
 ├── wiki/                            # GitHub Wiki pages
 │   └── (multiple .md files)
+
 
 
