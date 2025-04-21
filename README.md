@@ -101,11 +101,6 @@ This project is released under the MIT License. See [LICENSE](./LICENSE) for det
 
 ## Visual Diagram of Repo
 
-With **this improved version** using `text` for monospace formatting:
-
-
-With **this improved version** using `text` for monospace formatting:
-
 <pre>
 ```text
 bridging-the-mesh/
