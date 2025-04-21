@@ -20,9 +20,9 @@ This system enables **offline, resilient communication** during emergencies or i
 - 🧠 AI assistant (TinyLLaMA): Flags terms like "HELP", "FIRE", "EMERGENCY"
 - 📊 Node-RED dashboard: Displays real-time messages and alerts
 - 🔋 Fully off-grid deployable: Solar + LiFePO₄ + field-ready Pi units
-- 🧰 Tested on Raspberry Pi, FemtoFox, MikroTik hAP ac, Ubiquiti nodes
+- 🧰 Plan to test on Raspberry Pi5, FemtoFox, Station G2, MikroTik hAP ac, Ubiquiti nodes
 - 📡 Extends LoRa range using AREDN backbone
-- 💬 Designed for hams, preppers, educators & civic mesh deployments
+- 💬 Designed for hams, meshers, tech fiends, educators & civic mesh deployments
 
 ---
 
