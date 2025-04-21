@@ -1,4 +1,3 @@
-
 # 🛰️ Bridging the Mesh
 
 **A Hybrid Emergency Gateway for LoRa + AREDN + AI**  

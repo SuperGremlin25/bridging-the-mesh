@@ -67,9 +67,7 @@ python3 mqtt_bridge.py
 ## 📫 Communication
 
 You can also get in touch through:
-- Oklahoma Meshtastic Telegram - https://t.me/OKMeshtastic
-- OK DMR & Digital - https://t.me/OK_DMR_digital
-- OK 650 Discord Server - https://discord.gg/feVDqnVD
+- [OKC Meshtastic Group](https://www.facebook.com/groups/okcmeshtastic)
 - GitHub Issues & Discussions
 
 ---

@@ -38,7 +38,15 @@ Easily display:
 
 Join the mission → https://github.com/Supergremlin25/bridging-the-mesh
 ---
-Project by: KJ5IUL (Supergremlin25)  
-🌐  OKC | Bridging Meshtastic + AREDN + AI 
 
+```
+     __  __ ______     _____ _      _    _ _      _ 
+    |  \/  |  ____|   |_   _| |    | |  | | |    | |
+    | \  / | |__ ______| | | |    | |  | | |    | |
+    | |\/| |  __|______| | | |    | |  | | |    | |
+    | |  | | |____    _| |_| |____| |__| | |____|_|
+    |_|  |_|______|  |_____|______|\____/|______(_)
+                                                  
+                   KJ5IUL • Oklahoma
+     Bridging Meshtastic + AREDN with AI + MQTT
 ```
