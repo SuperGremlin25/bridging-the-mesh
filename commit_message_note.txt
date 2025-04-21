@@ -1,0 +1,8 @@
+chore: overwrite and update core project files
+
+- Replaced mqtt_bridge.py with validated production version
+- Updated mqtt_bridge.conf with clean default config
+- Updated README.md with refreshed overview and install references
+- Refined INSTALL.md for beginner setup clarity
+- Updated requirements.txt to match final dependency list
+- Updated ai_assistant_integration.md to reflect finalized classification flow
