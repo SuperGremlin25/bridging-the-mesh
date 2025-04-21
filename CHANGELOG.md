@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.9.1] - 2024-04-18
+## [v0.9.1] - 2024-04-20
 
 ### Added
 - `setup.sh`: Shell script to automate environment setup and runtime prompts
