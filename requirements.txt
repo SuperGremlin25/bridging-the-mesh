@@ -1,0 +1,5 @@
+
+paho-mqtt
+meshtastic
+flask
+weasyprint
